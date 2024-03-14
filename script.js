@@ -211,4 +211,4 @@ function updateSizes() {
 window.onload = () => {
   updateSizes();
 };
-setInterval(updateSizes, 1000); // Update location of the visitor every second.
+setInterval(updateSizes, 500); // Update location of the visitor every second.
