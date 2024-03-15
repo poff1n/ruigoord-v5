@@ -1,6 +1,5 @@
 const app = document.getElementById('app');
 const svgImages = document.querySelectorAll('.svg-image');
-
 const squares = Array.from(svgImages).map(svg => {
   return {
     lat: parseFloat(svg.getAttribute('data-lat')),
@@ -47,13 +46,13 @@ function calculateDistance(lat1, lon1, lat2, lon2)  {
 function showPopupWithArrow(lat_def, lon_def) {
   const popupContainer = document.getElementById('popupContainer');
   popupContainer.innerHTML = `
-    <div class="popup" style="padding: 120px;">
+    <div class="popup" style="padding: 80px;">
     <div class="compass">
     <div class="arrow"></div>
     <div class="compass-circle"></div>
     <div class="my-point"></div>
    </div>
-      <button id="closeButton" style="position: absolute; bottom: 10px; left: 10px; right: 10px; border: none; background-color: hsla(29,100%,50%,1); color: #fff; border-radius: 5px; padding: 10px; font-family: borna; font-size: 15px;">Close</button>
+      <button id="closeButton" style="position: absolute; bottom: 10px; left: 10px; right: 10px; border: none; background-color: white; color: hsla(29,100%,50%,1); border-radius: 5px; padding: 10px; font-family: Borna; font-size: 15px;">Sluit kompas</button>
     </div>`;
   popupContainer.style.display = 'block';
   isPopupOpen = true;
@@ -142,7 +141,6 @@ function showPopupWithArrow(lat_def, lon_def) {
 
     init();
 
-
   // Add event listener to the close button
   const closeButton = document.getElementById('closeButton');
   closeButton.addEventListener('click', function handleCloseButtonClick() {
@@ -211,4 +209,4 @@ function updateSizes() {
 window.onload = () => {
   updateSizes();
 };
-setInterval(updateSizes, 500); // Update location of the visitor every second.
+setInterval(updateSizes, 1000); // Update location of the visitor every second.
