@@ -66,7 +66,15 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #ebeaea;
+    background-color:hsla(186,100%,39%,1);
+    background-image:
+      radial-gradient(at 27% 7%, hsla(29,100%,50%,1) 0px, transparent 50%),
+      radial-gradient(at 4% 76%, hsla(322,100%,50%,1) 0px, transparent 50%),
+      radial-gradient(at 91% 73%, hsla(47,100%,50%,1) 0px, transparent 50%),
+      radial-gradient(at 88% 22%, hsla(271,100%,45%,1) 0px, transparent 50%),
+      radial-gradient(at 53% 65%, hsla(332,100%,69%,1) 0px, transparent 50%),
+      radial-gradient(at 0% 0%, hsla(120,100%,39%,1) 0px, transparent 50%),
+      radial-gradient(at 85% 70%, hsla(186,100%,39%,0.43) 0px, transparent 50%);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -132,32 +140,18 @@ body {
     color: #FFFFFF;
     line-height: 1.5;
     padding: 20px;
-margin: auto;  }
-
-.arrow {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 80px solid #3498db; /* Blue */
-  transform-origin: bottom center; /* Set rotation origin to bottom center */
-  position: absolute;
-  left: 45%;
-  transform: translateX(-50%) rotate(90deg); /* Initially point upwards */
-}
-
-.popup .arrow {
-  top: 0px; /* Adjust position to center in popup */
-  transform-origin: bottom center; /* Ensure rotation origin remains at bottom center */
-}
+    margin: auto;  
+  }
 
 .compass {
   position: relative;
-  width: 320px;
-  height: 320px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: hsla(29,100%,50%,1);
   margin: auto;
+  border: 1px;
 }
 
 .compass > .arrow {
@@ -169,7 +163,7 @@ margin: auto;  }
   transform: translateX(-50%);
   border-style: solid;
   border-width: 30px 20px 0 20px;
-  border-color: red transparent transparent transparent;
+  border-color: white transparent transparent transparent;
   z-index: 1;
 }
 
@@ -182,7 +176,7 @@ margin: auto;  }
   left: 50%;
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease-out;
-  background: url(https://www.shareicon.net/data/128x128/2015/09/22/644798_arrows_512x512.png) center
+  background: url(pijl.png) center
     no-repeat;
   background-size: contain;
 }
